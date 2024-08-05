@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas San Cristóbal</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Rutas San Cristóbal</h1>
+        <form id="graphForm">
+            <div class="form-section">
+                <h2>Agregar Puntos</h2>
+                <input type="text" id="vertices" placeholder="Ingresa los puntos (separados por comas)">
+                <button type="button" id="addVerticesBtn">Agregar Puntos</button>
+            </div>
+            <div class="form-section">
+                <h2>Agregar Conexión</h2>
+                <input type="text" id="inicio" placeholder="Punto de inicio">
+                <input type="text" id="fin" placeholder="Punto de fin">
+                <input type="number" id="peso" placeholder="Peso" value="1">
+                <button type="button" id="addAristaBtn">Agregar Conexión</button>
+            </div>
+            <div class="form-section">
+                <h2>Recorrido en Profundidad</h2>
+                <button type="button" id="dfsBtn">Realizar Recorrido</button>
+            </div>
+            <div class="form-section">
+                <h2>Camino Más Corto</h2>
+                <input type="text" id="dijkstraInicio" placeholder="Punto de inicio">
+                <button type="button" id="dijkstraBtn">Buscar Camino</button>
+            </div>
+            <div id="salida" class="output-container"></div>
+        </form>
+    </div>
+    <script type="module" src="./src/controllers/app.js"></script>
+</body>
+</html>
